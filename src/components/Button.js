@@ -28,6 +28,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   name: 'claculator',
+  wide:"",
 };
 
 export default Button;
