@@ -10,29 +10,31 @@ const ButtonPanel = () => {
     group5: ['.'],
   };
 
+  const isTrue = true;
+
   const generateKey = pre => `${pre}_${new Date().getTime()}`;
 
   return (
     <div className="button-container">
       <div className="button-container-div">
-        {array.group1.map((item) => <Button name={item} key={generateKey(item)} />)}
+        {array.group1.map(item => <Button name={item} key={generateKey(item)} />)}
         <Button name="÷" color="orange" />
       </div>
       <div className="button-container-div">
-        {array.group2.map((item) => <Button name={item} key={generateKey(item)} />)}
+        {array.group2.map(item => <Button name={item} key={generateKey(item)} />)}
         <Button name="X" color="orange" />
       </div>
       <div className="button-container-div">
-        {array.group3.map((item) => <Button name={item} key={generateKey(item)} />)}
+        {array.group3.map(item => <Button name={item} key={generateKey(item)} />)}
         <Button name="-" color="orange" />
       </div>
       <div className="button-container-div">
-        {array.group4.map((item) => <Button name={item} key={generateKey(item)} />)}
+        {array.group4.map(item => <Button name={item} key={generateKey(item)} />)}
         <Button name="+" color="orange" />
       </div>
       <div className="button-container-div">
-        <Button name="0" wide={true} />
-        {array.group5.map((item) => <Button name={item} key={generateKey(item)} />)}
+        <Button name="0" wide={isTrue} />
+        {array.group5.map(item => <Button name={item} key={generateKey(item)} />)}
         <Button name="=" color="orange" />
       </div>
     </div>
