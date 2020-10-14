@@ -23,6 +23,7 @@ const Button = props => {
 Button.propTypes = {
   name: PropTypes.string,
   wide: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 Button.defaultProps = {
