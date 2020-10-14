@@ -13,24 +13,24 @@ const ButtonPanel = () => {
   return (
     <div className="button-container">
       <div className="button-container-div">
-        {array.group1.map((item, i) => <Button name={item} />)}
+        {array.group1.map((item, i) => <Button name={item} key={i + 1} />)}
         <Button name="÷" color="orange" />
       </div>
       <div className="button-container-div">
-        {array.group2.map((item, i) => <Button name={item} />)}
+        {array.group2.map((item, i) => <Button name={item} key={i + 1} />)}
         <Button name="X" color="orange" />
       </div>
       <div className="button-container-div">
-        {array.group3.map((item, i) => <Button name={item} />)}
+        {array.group3.map((item, i) => <Button name={item} key={i + 1} />)}
         <Button name="-" color="orange" />
       </div>
       <div className="button-container-div">
-        {array.group4.map((item, i) => <Button name={item} />)}
+        {array.group4.map((item, i) => <Button name={item} key={i + 1} />)}
         <Button name="+" color="orange" />
       </div>
       <div className="button-container-div">
         <Button name="0" wide={true} />
-        {array.group5.map((item, i) => <Button name={item} />)}
+        {array.group5.map((item, i) => <Button name={item} key={i + 1} />)}
         <Button name="=" color="orange" />
       </div>
     </div>
