@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import { App } from './components/App'
 
 const HelloWorld = () => (
-  <div className="hello">
-    <h1>Hello World</h1>
+  <div className="container">
+    <App />
   </div>
 );
 
@@ -15,5 +16,3 @@ ReactDOM.render(
 );
 
 serviceWorker.unregister();
-
-export default HelloWorld;

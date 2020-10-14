@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-class Display extends React.Component {
-  constructor(props) { }
+export class Display extends React.Component {
   render() {
     return <div>
       <h1>{this.props.result}</h1>
@@ -17,5 +16,3 @@ Display.defaultProps = {
 Display.propTypes = {
   result: PropTypes.string
 }
-
-export default Display

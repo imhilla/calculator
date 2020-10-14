@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class ButtonPanel extends React.Component {
-  constructor(props) { }
+export class ButtonPanel extends React.Component {
   render() {
     return <div>
       <div>
