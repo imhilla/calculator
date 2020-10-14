@@ -1,7 +1,8 @@
+/* eslint-disable prefer-destructuring */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = (props) => <div><h1>{props.result}</h1></div>
+const Display = props => <div><h1>{props.result}</h1></div>;
 
 Display.defaultProps = {
   result: '0',
