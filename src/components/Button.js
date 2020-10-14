@@ -27,7 +27,6 @@ Button.propTypes = {
 Button.defaultProps = {
   name: 'claculator',
   color: 'gray',
-  wide: "true",
 };
 
 export default Button;
