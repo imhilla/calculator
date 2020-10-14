@@ -7,8 +7,8 @@ const Button = props => {
     half: '25%',
   };
   let widthB;
-
-  if (props.wide === true) { // eslint-disable-line
+  /* eslint-disable */
+  if (props.wide === true) {
     widthB = widthC.fifty;
   } else {
     widthB = widthC.half;
@@ -16,10 +16,10 @@ const Button = props => {
   return (
     <button className="button-button" style={{ backgroundColor: props.color, width: widthB }} type="button">
       {props.name}
-    </button> // eslint-disable-line
+    </button>
   );
 };
-
+/* eslint-enable */
 Button.propTypes = {
   name: PropTypes.string,
   wide: PropTypes.bool,
@@ -28,6 +28,7 @@ Button.propTypes = {
 Button.defaultProps = {
   name: 'claculator',
   wide: '',
+  color: 'gray',
 };
 
 export default Button;
