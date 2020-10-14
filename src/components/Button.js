@@ -14,10 +14,9 @@ const Button = props => {
     widthB = widthC.half;
   }
   return (
-    // eslint-disable-next-line
     <button className="button-button" style={{ backgroundColor: props.color, width: widthB }} type="button">
       {props.name}
-    </button>
+    </button> // eslint-disable-line
   );
 };
 
@@ -28,7 +27,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   name: 'claculator',
-  wide:"",
+  wide: '',
 };
 
 export default Button;
