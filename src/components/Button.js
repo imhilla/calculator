@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = props => <button className="button-button">{props.name}</button>; // eslint-disable-line
+const Button = props => <button className="button-button" type="button">{props.name}</button>; // eslint-disable-line
 
 Button.propTypes = {
   name: PropTypes.string,
