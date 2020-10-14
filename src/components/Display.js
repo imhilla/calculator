@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = props => <div><h1>{props.result}</h1></div>; // eslint-disable-line
+const Display = props => <div className="display-container"><h1>{props.result}</h1></div>; // eslint-disable-line
 
 Display.defaultProps = {
   result: '0',

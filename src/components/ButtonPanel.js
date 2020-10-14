@@ -1,35 +1,36 @@
 import React from 'react';
+import Button from './Button'
 
 const ButtonPanel = () => (
-  <div>
-    <div>
-      <button type="button">AC</button>
-      <button type="button">+/-</button>
-      <button type="button">%</button>
-      <button type="button">÷</button>
+  <div className="button-container">
+    <div className="button-container-div">
+      <Button type="button" className="button-button" name='AC'></Button>
+      <Button type="button" className="button-button" name="+/-"></Button>
+      <Button type="button" className="button-button" name="%"></Button>
+      <Button type="button" className="button-button" name="÷"></Button>
     </div>
-    <div>
-      <button type="button">7</button>
-      <button type="button">8</button>
-      <button type="button">9</button>
-      <button type="button">X</button>
+    <div className="button-container-div">
+      <Button type="button" className="button-button" name="7"></Button>
+      <Button type="button" className="button-button" name="8"></Button>
+      <Button type="button" className="button-button" name="9"></Button>
+      <Button type="button" className="button-button" name="X"></Button>
     </div>
-    <div>
-      <button type="button">4</button>
-      <button type="button">5</button>
-      <button type="button">6</button>
-      <button type="button">-</button>
+    <div className="button-container-div">
+      <Button type="button" className="button-button" name="4"></Button>
+      <Button type="button" className="button-button" name="5"></Button>
+      <Button type="button" className="button-button" name="6"></Button>
+      <Button type="button" className="button-button" name="-"></Button>
     </div>
-    <div>
-      <button type="button">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-      <button type="button">+</button>
+    <div className="button-container-div">
+      <Button type="button" className="button-button" name="1"></Button>
+      <Button type="button" className="button-button" name="2"></Button>
+      <Button type="button" className="button-button" name="3"></Button>
+      <Button type="button" className="button-button" name="+"></Button>
     </div>
-    <div>
-      <button type="button">0</button>
-      <button type="button">.</button>
-      <button type="button">=</button>
+    <div className="button-container-div">
+      <Button type="button" className="button-button-lg" name="0"></Button>
+      <Button type="button" className="button-button" name="."></Button>
+      <Button type="button" className="button-button" name="="></Button>
     </div>
   </div>
 );
