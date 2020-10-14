@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Calculator [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/imhilla/calculator)
 
-## Available Scripts
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+![GitHub followers](https://img.shields.io/github/followers/imhilla?label=imhilla&style=social)
+![Twitter URL](https://img.shields.io/twitter/follow/hillarykiptoo_?label=Follow&style=social)
 
-In the project directory, you can run:
+> This is a Microverse React project
 
-### `npm start`
+>  Calculator milestone one!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Calculator is a react project. This is the first milestone which involves basic set up and deployment 
 
-### `npm test`
+## Live version
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Heres a live <a href="https://mars-calculator.herokuapp.com/">link</a>
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this project, the following features were done;
+- Created react app with create-react-app
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- HTML
+- Git
+- CSS
+- JavaScript
+- Shields.io
+- Webpack
+- npm
+- command-line tools such as git.
+- React
+- Mars
+- create-react-app-buildpack
+- big.js
 
-### `npm run eject`
+## Author
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Reach out!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👤 **Hillary Kiptoo**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- LinkedIn: [Hillary Kiptoo](https://www.linkedin.com/in/hillarykiptoo)
+- Github: [@imhilla](https://github.com/imhilla)
+- Twitter: [@hillarykiptoo](https://twitter.com/hillarykiptoo_)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributing 🤝
 
-## Learn More
+Contributions, issues, and feature requests are welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Thanks to Microverse for its support!
 
-### Code Splitting
+## Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Give a ⭐️ if you like this project!
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
