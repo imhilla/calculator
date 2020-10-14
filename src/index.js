@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-const HelloWorld = () => {
-
-  return (
-    <div className="hello">
-      <h1>Hello World</h1>
-    </div>
-  );
-
-};
+const HelloWorld = () => (
+  <div className="hello">
+    <h1>Hello World</h1>
+  </div>
+);
 
 ReactDOM.render(
   <HelloWorld />,
@@ -20,4 +16,4 @@ ReactDOM.render(
 
 serviceWorker.unregister();
 
-export default HelloWorld
+export default HelloWorld;
