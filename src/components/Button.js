@@ -1,7 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = props => <button className="button-button" type="button">{props.name}</button>; // eslint-disable-line
+const Button = (props) => {
+  const widthC = {
+    fifty: "50%",
+    half: "25%",
+  }
+  let widthB
+
+  if (props.wide == true) {
+    widthB = widthC.fifty
+  } else {
+    widthB = widthC.half
+  }
+  return (
+    <button className="button-button" style={{ backgroundColor: props.color, width: widthB }} type="button">
+      {props.name}
+    </button>
+  )
+}; // eslint-disable-line
 
 Button.propTypes = {
   name: PropTypes.string,
@@ -9,8 +26,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   name: 'claculator',
-  color: 'orange',
-  wide: "",
+  color: 'gray',
+  wide: "true",
 };
 
 export default Button;
