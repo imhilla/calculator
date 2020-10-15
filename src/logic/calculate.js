@@ -4,10 +4,10 @@ const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
     var { total, next, operation } = dataObject;
     if (buttonName === operation) {
-      total = Operate.operate(total, next, operation);
-      const newObj = { total, next, operation };
-      return newObj
+      Operate.operate(total, next, operation);
     }
+    const newObj = { total, next, operation };
+    return newObj;
   };
   return calculate;
 })();
