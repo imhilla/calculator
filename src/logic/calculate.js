@@ -3,7 +3,7 @@ import Operate from './operate';
 const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
     const newObj
-    const newTotal
+    let newTotal
     const { total, next, operation } = dataObject;
     if (buttonName === operation) {
       newTotal = Operate.operate(total, next, buttonName);
