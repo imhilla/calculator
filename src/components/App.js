@@ -15,14 +15,24 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = (buttonName) => {
-    this.setState(Calculate.calculate(this.state, buttonName));
+  handleClick = (evt) => {
+    const buttonName = evt.target.innerText;
+    console.log(buttonName)
+    this.setState(() => {
+      const result = Calculate.calculate(this.state, buttonName)
+      return {
+        total: result.total,
+        next: result.next,
+        operation: result.operation,
+        result: buttonName === '=' ? result.total : result.result,
+      };
+    });
   }
   render() {
     const result = this.state.result
     return (
       <div className="main-container">
-        <Display result={result === '' ? '0' : result.toString()} />
+        <Display result={result === '' ? '0' : result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     )
