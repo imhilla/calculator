@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
+/* eslint-disable react/no-unused-state */
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import './App.css';
-// eslint-disable-next-line
 import Calculate from '../logic/calculate';
 import { render } from '@testing-library/react';
 
@@ -13,15 +15,16 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(buttonName) {
-
+  handleClick = (buttonName) => {
+    // this.setState(Calculate.calculate(this.state, buttonName));
+    console.log('yes')
   }
   render() {
 
     return (
       <div className="main-container">
-        <Display />
-        <ButtonPanel />
+        <Display result={this.state.total} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     )
   }

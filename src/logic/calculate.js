@@ -10,7 +10,7 @@ const Calculate = (() => {
     const newObj = { total, next, operation };
     return newObj;
   };
-  return calculate;
+  return { calculate };
 })();
 
 export default Calculate;
