@@ -2,7 +2,8 @@ import Operate from './operate';
 
 const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
-    let {total, next, operation} = dataObject;
+    const { next, operation } = dataObject;
+    let { total } = dataObject;
     if (buttonName === operation) {
       total = Operate.operate(total, next, buttonName);
     }
