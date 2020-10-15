@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name, wide, color } = props
+  const { name, wide, color } = props;
   const widthC = {
     fifty: '50%',
     half: '25%',
