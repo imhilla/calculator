@@ -5,9 +5,9 @@ const Operate = (() => {
     // eslint-disable-next-line
     let total;
     // eslint-disable-next-line
-    let one;
+    const one;
     // eslint-disable-next-line
-    let two;
+    const two;
     one = Big(numberOne);
     two = Big(numberTwo);
     if (operation === '-') {
