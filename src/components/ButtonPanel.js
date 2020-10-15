@@ -12,7 +12,7 @@ const ButtonPanel = () => {
   };
 
   const isTrue = true;
- 
+
   return (
     <div className="button-container">
       <div className="button-container-div">
