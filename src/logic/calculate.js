@@ -3,14 +3,14 @@ import Operate from './operate';
 const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
     const { next, operation } = dataObject;
-    let { total } = dataObject;
-
+    const { total } = dataObject;
+    const finalTotal
     if (buttonName === operation) {
-      let finalTotal = Operate.operate(total, next, buttonName);
-      return finalTotal
+      finalTotal = Operate.operate(total, next, buttonName);
+      return finalTotal;
     }
-    dataObject = { total: finalTotal, next: next, operation: operation }
-    return dataObject;
+    const newdataObject = { total: finalTotal, next, operation };
+    return newdataObject;
   };
   return calculate;
 })();
