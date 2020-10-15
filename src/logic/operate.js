@@ -2,8 +2,11 @@ import Big from 'big.js';
 
 const Operate = (() => {
   const operate = (numberOne, numberTwo, operation) => {
+    // eslint-disable-next-line
     let total;
+    // eslint-disable-next-line
     let one;
+    // eslint-disable-next-line
     let two;
     one = Big(numberOne);
     two = Big(numberTwo);
