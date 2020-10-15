@@ -7,7 +7,7 @@ const Display = props => {
     <div className="display-container">
       <h1>{result}</h1>
     </div>
-  )
+  );
 };
 
 Display.defaultProps = {
