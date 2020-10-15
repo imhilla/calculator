@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './Button';
 import { v4 as uuidv4 } from 'uuid';
+import Button from './Button';
 
 const ButtonPanel = () => {
   const array = {

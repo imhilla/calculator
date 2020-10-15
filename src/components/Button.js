@@ -2,20 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
+  const { name, wide, color } = props
   const widthC = {
     fifty: '50%',
     half: '25%',
   };
   let widthB;
 
-  if (props.wide === true) {
+  if (wide === true) {
     widthB = widthC.fifty;
   } else {
     widthB = widthC.half;
   }
   return (
-    <button className="button-button" style={{ backgroundColor: props.color, width: widthB }} type="button">
-      {props.name}
+    <button className="button-button" style={{ backgroundColor: color, width: widthB }} type="button">
+      {name}
     </button>
   );
 };
