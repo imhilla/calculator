@@ -7,7 +7,7 @@ const Button = props => {
     half: '25%',
   };
   let widthB;
-  /* eslint-disable */
+
   if (props.wide === true) {
     widthB = widthC.fifty;
   } else {
@@ -19,7 +19,7 @@ const Button = props => {
     </button>
   );
 };
-/* eslint-enable */
+
 Button.propTypes = {
   name: PropTypes.string,
   wide: PropTypes.bool,
