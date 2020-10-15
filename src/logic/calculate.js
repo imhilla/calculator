@@ -6,8 +6,8 @@ const Calculate = (() => {
     let newTotal
     const { total, next, operation } = dataObject;
     if (buttonName === operation) {
-      newTotal = Operate.operate(total, next, buttonName);
-      newObj = { total: newTotal, next, operation };
+      Operate.operate(total, next, buttonName);
+      newObj = { total, next, operation };
       return newObj
     }
   };
