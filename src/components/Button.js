@@ -28,7 +28,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   name: 'claculator',
-  wide: true,
+  wide: false,
   color: 'gray',
 };
 
