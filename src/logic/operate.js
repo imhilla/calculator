@@ -1,24 +1,25 @@
 import Big from 'big.js';
 
 const Operate = (() => {
-  let result
-  let one;
-  let two;
+
   const operate = (numberOne, numberTwo, operation) => {
+    let total
+    let one;
+    let two;
     one = Big(numberOne)
     two = Big(numberTwo)
     if (operation === "-") {
-      result = one - two
+      total = one - two
     } else if (operation === "+") {
-      result = one + two
+      total = one + two
     } else if (operation === "X") {
-      result = one * two
+      total = one * two
     } else if (operation === "÷") {
-      result = one / two
+      total = one / two
     } else if (operation === "%") {
-      result = (one / 100) * two
+      total = (one / 100) * two
     }
-    return result
+    return total
   }
   return { operate }
 })();
