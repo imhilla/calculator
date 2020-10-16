@@ -11,22 +11,21 @@ import { render } from '@testing-library/react';
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { total: '', next: '', operation: null, result: '' }
+    this.state = { total: null, next: null, operation: null, result: '' }
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = (evt) => {
     const buttonName = evt.target.innerText;
     this.setState((prevState) => {
-      const result = Calculate.calculate(prevState, buttonName)
-      // console.log(result)
-      // return {
-      //   total: result.total,
-      //   next: result.next,
-      //   operation: result.operation,
-      //   result: buttonName === '=' ? result.total : result.result,
-      // };
-      console.log(result)
+      var result = Calculate.calculate(prevState, buttonName)
+      var result = prevState
+      return {
+        total: result.total,
+        next: result.next,
+        operation: result.operation,
+        result: buttonName === '=' ? result.total : result.result,
+      };
     });
   }
   render() {

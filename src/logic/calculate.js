@@ -4,14 +4,14 @@ const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
     // eslint-disable-next-line
     var { total, next, operation } = dataObject;
+    // console.log(dataObject)
     const operationArray = ['+', '-', 'X', '÷', '%']
-    console.log(dataObject)
     operationArray.forEach((item) => {
       if (buttonName === item) {
-        const newDataO = Operate.operate(total=5, next=4, operation = `${item}`);
-        console.log(newDataO)
-        return newDataO
-      } 
+        var newDataO = Operate.operate(total = 5, next = 4, operation = `${item}`);
+        dataObject.total = newDataO
+        return dataObject
+      }
     })
   };
   return { calculate };
