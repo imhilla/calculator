@@ -9,7 +9,7 @@ const Operate = (() => {
     if (operation === '-') {
       total = one - two;
     } else if (operation === '+') {
-      total = one + two;
+      total = parseInt(one) + parseInt(two);
     } else if (operation === 'X') {
       total = one * two;
     } else if (operation === '÷') {

@@ -4,11 +4,15 @@ const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
     // eslint-disable-next-line
     var { total, next, operation } = dataObject;
-    if (buttonName === operation) {
-      Operate.operate(total, next, operation);
-    }
-    const newObj = { total, next, operation };
-    return newObj;
+    const operationArray = ['+', '-', 'X', '÷', '%']
+    console.log(dataObject)
+    operationArray.forEach((item) => {
+      if (buttonName === item) {
+        const newDataO = Operate.operate(total=5, next=4, operation = `${item}`);
+        console.log(newDataO)
+        return newDataO
+      } 
+    })
   };
   return { calculate };
 })();
