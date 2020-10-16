@@ -24,7 +24,7 @@ class App extends React.Component {
         total: result.total,
         next: result.next,
         operation: result.operation,
-        result: buttonName === '=' ? result.total : result.result,
+        result: buttonName === '=' ? result.total : result.next,
       };
     });
   }
