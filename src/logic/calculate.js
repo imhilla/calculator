@@ -16,19 +16,38 @@ const Calculate = (() => {
     store.join()
     dataObject.next = store
     // }
-    const operationArray = ['+', '-', 'X', '÷', '%']
+    const operationArray = ['+', '-', 'X', '÷', '%', '=']
     operationArray.forEach((item) => {
       if (buttonName === item) {
         numberOne = dataObject.next
         numberOne = numberOne.join().replace(/,/g, '')
         numberOne = numberOne.slice(0, -1);
-        var newDataO = Operate.operate(total = numberOne, numberTwo = 4, operation = `${item}`);
-        dataObject.total = newDataO
-        return dataObject
+        if (buttonName == '=' || numberOne.includes('+') || numberOne.includes('-') ||
+          numberOne.includes('X') || numberOne.includes('÷') || numberOne.includes('%')) {
+          var splited = numberOne.split("")
+          splited.forEach((match, index) => {
+            if (match === 'X' || match === '+' || match === '-' || match === '÷' || match === '%') {
+              var newNoOne = splited.slice(0, index).join('')
+              var newNoTwo = splited.slice(index + 1).join('')
+              var operation = splited.slice(index, index+1)
+              operation = operation[0]
+              newNoOne = parseInt(newNoOne)
+              newNoTwo = parseInt(newNoTwo)
+              //remember item === next symbol
+              var newDataO = Operate.operate(newNoOne, newNoTwo, operation);
+              // console.log(newDataO)
+              dataObject.total = newDataO
+              // console.log(dataObject.total)
+              return dataObject
+            }
+          })
+
+        };
       }
     })
+  }
 
-  };
+
   return { calculate };
 })();
 

@@ -20,6 +20,7 @@ class App extends React.Component {
     this.setState((prevState) => {
       Calculate.calculate(prevState, buttonName)
       var result = prevState
+      // console.log(result)
       return {
         total: result.total,
         next: result.next,
@@ -30,6 +31,7 @@ class App extends React.Component {
   }
   render() {
     const result = this.state.result
+    const myTotal = this.state.total
     return (
       <div className="main-container">
         <Display result={result === '' ? '0' : result} />
