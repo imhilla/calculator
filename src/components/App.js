@@ -18,7 +18,7 @@ class App extends React.Component {
   handleClick = (evt) => {
     const buttonName = evt.target.innerText;
     this.setState((prevState) => {
-      var result = Calculate.calculate(prevState, buttonName)
+      Calculate.calculate(prevState, buttonName)
       var result = prevState
       return {
         total: result.total,
