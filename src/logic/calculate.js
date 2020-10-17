@@ -49,11 +49,10 @@ const Calculate = (() => {
       window.location.reload();
     }
     if (buttonName === '+/-') {
-      let myResult = dataObject.result
+      let myResult = dataObject.result;
       myResult = (myResult.join().replace(/,/g, '')) * (-1);
-      let clonned = dataObject;
+      const clonned = dataObject;
       clonned.next = myResult;
-      // console.log(dataObject.next)
     }
   };
 
