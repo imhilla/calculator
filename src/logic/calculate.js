@@ -35,8 +35,9 @@ const Calculate = (() => {
               newNoTwo = parseInt(newNoTwo)
               //remember item === next symbol
               var newDataO = Operate.operate(newNoOne, newNoTwo, operation);
-              // console.log(newDataO)
+              console.log(newDataO)
               dataObject.total = newDataO
+              dataObject.next = newDataO +`${item}`
               // console.log(dataObject.total)
               return dataObject
             }
