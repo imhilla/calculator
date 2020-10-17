@@ -4,6 +4,8 @@ const Operate = (() => {
   const operate = (numberOne, numberTwo, operation) => {
     // eslint-disable-next-line
     let total;
+    console.log(numberOne)
+    console.log(numberTwo)
     const one = Big(numberOne);
     const two = Big(numberTwo);
     if (operation === '-') {

@@ -7,7 +7,6 @@ const Calculate = (() => {
     var { total, next, operation } = dataObject;
     let numberOne
     let numberTwo
-    // if (buttonName !== '+' && buttonName !== '-' && buttonName !== 'X' && buttonName !== '÷' && buttonName !== '%') {
     const newNext = dataObject.next
     let store = []
     store.push(newNext)
@@ -15,7 +14,6 @@ const Calculate = (() => {
     store.push(buttonName)
     store.join()
     dataObject.next = store
-    // }
     const operationArray = ['+', '-', 'X', '÷', '%', '=']
     operationArray.forEach((item) => {
       if (buttonName === item) {
@@ -35,21 +33,23 @@ const Calculate = (() => {
               newNoTwo = parseInt(newNoTwo)
               //remember item === next symbol
               var newDataO = Operate.operate(newNoOne, newNoTwo, operation);
-              console.log(newDataO)
               dataObject.total = newDataO
               if (buttonName !== '=') {
                 dataObject.next = newDataO + `${item}`
-                // console.log(dataObject.total)
+              } else {
+                dataObject.next = newDataO
               }
               return dataObject
             }
           })
-
         };
       }
     })
+    if (buttonName === 'AC') {
+      dataObject.next = null;
+      window.location.reload()
+    }
   }
-
 
   return { calculate };
 })();
