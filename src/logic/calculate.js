@@ -48,6 +48,12 @@ const Calculate = (() => {
       clonedDataO.next = null;
       window.location.reload();
     }
+    if (buttonName === '+/-') {
+      let myResult = dataObject.result;
+      myResult = (myResult.join().replace(/,/g, '')) * (-1);
+      const clonned = dataObject;
+      clonned.next = myResult;
+    }
   };
 
   return { calculate };
