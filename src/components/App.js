@@ -1,15 +1,45 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
+/* eslint-disable react/no-unused-state */
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import './App.css';
-// eslint-disable-next-line
 import Calculate from '../logic/calculate';
 
-const App = () => (
-  <div className="main-container">
-    <Display />
-    <ButtonPanel />
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null, next: null, operation: null, result: '',
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = evt => {
+    const buttonName = evt.target.innerText;
+    this.setState(prevState => {
+      Calculate.calculate(prevState, buttonName);
+      const result = prevState;
+      // console.log(result)
+      return {
+        total: result.total,
+        next: result.next,
+        operation: result.operation,
+        result: buttonName === '=' ? result.total : result.next,
+      };
+    });
+  }
+
+  render() {
+    const { result } = this.state;
+    return (
+      <div className="main-container">
+        <Display result={result === '' ? '0' : result} />
+        <ButtonPanel clickHandler={this.handleClick} />
+      </div>
+    );
+  }
+}
 
 export default App;
