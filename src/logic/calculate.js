@@ -5,51 +5,51 @@ const Calculate = (() => {
   const calculate = (dataObject, buttonName) => {
     // eslint-disable-next-line
     var { total, next, operation } = dataObject;
-    let numberOne
-    let numberTwo
-    const newNext = dataObject.next
-    let store = []
-    store.push(newNext)
-    store.join()
-    store.push(buttonName)
-    store.join()
-    dataObject.next = store
-    const operationArray = ['+', '-', 'X', '÷', '%', '=']
-    operationArray.forEach((item) => {
+    let numberOne;
+    let numberTwo;
+    const newNext = dataObject.next;
+    const store = [];
+    store.push(newNext);
+    store.join();
+    store.push(buttonName);
+    store.join();
+    dataObject.next = store;
+    const operationArray = ['+', '-', 'X', '÷', '%', '='];
+    operationArray.forEach(item => {
       if (buttonName === item) {
-        numberOne = dataObject.next
-        numberOne = numberOne.join().replace(/,/g, '')
+        numberOne = dataObject.next;
+        numberOne = numberOne.join().replace(/,/g, '');
         numberOne = numberOne.slice(0, -1);
-        if (buttonName == '=' || numberOne.includes('+') || numberOne.includes('-') ||
-          numberOne.includes('X') || numberOne.includes('÷') || numberOne.includes('%')) {
-          var splited = numberOne.split("")
+        if (buttonName == '=' || numberOne.includes('+') || numberOne.includes('-')
+          || numberOne.includes('X') || numberOne.includes('÷') || numberOne.includes('%')) {
+          const splited = numberOne.split('');
           splited.forEach((match, index) => {
             if (match === 'X' || match === '+' || match === '-' || match === '÷' || match === '%') {
-              var newNoOne = splited.slice(0, index).join('')
-              var newNoTwo = splited.slice(index + 1).join('')
-              var operation = splited.slice(index, index + 1)
-              operation = operation[0]
-              newNoOne = parseInt(newNoOne)
-              newNoTwo = parseInt(newNoTwo)
-              //remember item === next symbol
-              var newDataO = Operate.operate(newNoOne, newNoTwo, operation);
-              dataObject.total = newDataO
+              let newNoOne = splited.slice(0, index).join('');
+              let newNoTwo = splited.slice(index + 1).join('');
+              let operation = splited.slice(index, index + 1);
+              operation = operation[0];
+              newNoOne = parseInt(newNoOne);
+              newNoTwo = parseInt(newNoTwo);
+              // remember item === next symbol
+              const newDataO = Operate.operate(newNoOne, newNoTwo, operation);
+              dataObject.total = newDataO;
               if (buttonName !== '=') {
-                dataObject.next = newDataO + `${item}`
+                dataObject.next = `${newDataO}${item}`;
               } else {
-                dataObject.next = newDataO
+                dataObject.next = newDataO;
               }
-              return dataObject
+              return dataObject;
             }
-          })
-        };
+          });
+        }
       }
-    })
+    });
     if (buttonName === 'AC') {
       dataObject.next = null;
-      window.location.reload()
+      window.location.reload();
     }
-  }
+  };
 
   return { calculate };
 })();

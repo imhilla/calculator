@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
-
   render() {
     const { clickHandler } = this.props;
     const array = {
@@ -39,8 +38,8 @@ class ButtonPanel extends React.Component {
           <Button name="=" color="orange" handleClick={clickHandler} />
         </div>
       </div>
-    )
-  };
-};
+    );
+  }
+}
 
 export default ButtonPanel;

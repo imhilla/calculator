@@ -10,16 +10,18 @@ import { render } from '@testing-library/react';
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { total: null, next: null, operation: null, result: '' }
+    super(props);
+    this.state = {
+      total: null, next: null, operation: null, result: '',
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = (evt) => {
+  handleClick = evt => {
     const buttonName = evt.target.innerText;
-    this.setState((prevState) => {
-      Calculate.calculate(prevState, buttonName)
-      var result = prevState
+    this.setState(prevState => {
+      Calculate.calculate(prevState, buttonName);
+      const result = prevState;
       // console.log(result)
       return {
         total: result.total,
@@ -29,16 +31,17 @@ class App extends React.Component {
       };
     });
   }
+
   render() {
-    const result = this.state.result
-    const myTotal = this.state.total
+    const { result } = this.state;
+    const myTotal = this.state.total;
     return (
       <div className="main-container">
         <Display result={result === '' ? '0' : result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
-    )
+    );
   }
-};
+}
 
 export default App;
