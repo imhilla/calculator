@@ -29,7 +29,7 @@ const Calculate = (() => {
             if (match === 'X' || match === '+' || match === '-' || match === '÷' || match === '%') {
               var newNoOne = splited.slice(0, index).join('')
               var newNoTwo = splited.slice(index + 1).join('')
-              var operation = splited.slice(index, index+1)
+              var operation = splited.slice(index, index + 1)
               operation = operation[0]
               newNoOne = parseInt(newNoOne)
               newNoTwo = parseInt(newNoTwo)
@@ -37,8 +37,10 @@ const Calculate = (() => {
               var newDataO = Operate.operate(newNoOne, newNoTwo, operation);
               console.log(newDataO)
               dataObject.total = newDataO
-              dataObject.next = newDataO +`${item}`
-              // console.log(dataObject.total)
+              if (buttonName !== '=') {
+                dataObject.next = newDataO + `${item}`
+                // console.log(dataObject.total)
+              }
               return dataObject
             }
           })
