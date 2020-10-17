@@ -27,12 +27,14 @@ Button.propTypes = {
   name: PropTypes.string,
   wide: PropTypes.bool,
   color: PropTypes.string,
+  handleClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   name: 'claculator',
   wide: false,
   color: 'gray',
+  handleClick: '',
 };
 
 export default Button;

@@ -1,4 +1,10 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
+/* eslint-disable react/no-unused-state */
+/* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import Button from './Button';
 
@@ -41,5 +47,12 @@ class ButtonPanel extends React.Component {
     );
   }
 }
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: '',
+};
 
 export default ButtonPanel;

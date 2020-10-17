@@ -6,7 +6,6 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import './App.css';
 import Calculate from '../logic/calculate';
-import { render } from '@testing-library/react';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,7 +33,6 @@ class App extends React.Component {
 
   render() {
     const { result } = this.state;
-    const myTotal = this.state.total;
     return (
       <div className="main-container">
         <Display result={result === '' ? '0' : result} />
