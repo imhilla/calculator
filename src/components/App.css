@@ -1,0 +1,38 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+}
+
+.display-container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+  justify-content: flex-end;
+}
+
+.display-container h1 {
+  color: white;
+  font-weight: bold;
+  margin: auto 10px;
+}
+
+.button-container-div {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 700px;
+}
+
+.button-button {
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.button-button-lg {
+  border: 1px solid black;
+  width: 50%;
+  font-size: 20px;
+}
